@@ -229,6 +229,17 @@ ul {
   width: calc((100% - 72px) / 4);
 }
 
+.advantage-item-icon-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+  align-items: center;
+  height: 112px;
+}
+
 .main-page-title-achievement {
   font-size: 20px;
   font-weight: 500;
@@ -272,10 +283,15 @@ ul {
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
   background-color: #fff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .main-page-title-team-desc {
   padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-page-title-team-name {
@@ -294,6 +310,33 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-member-links-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.team-member-links-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-member-links-link:hover {
+  background-color: #404bbf;
+}
+
+.team-member-links-link:focus {
+  background-color: #404bbf;
+}
+.social-link-icon {
+  fill: #f4f4fd;
 }
 
 /* Portfolio */
@@ -323,6 +366,36 @@ ul {
 
 .main-page-list-portfolio {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-list-item:hover .app-description {
+  transform: translateY(0);
+}
+
+.app-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.app-description {
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-page-title-porfolio-name-desc {
@@ -353,6 +426,16 @@ ul {
 .footer-section {
   background-color: #2e2f42;
   padding: 100px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.footer-company-info {
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -387,4 +470,37 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+
+.footer-social-media-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-media-links-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-media-links-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link-icon {
+  fill: #f4f4fd;
+}
+.footer-media-links-link:hover {
+  background-color: #31d0aa;
+}
+.footer-media-links-link:focus {
+  background-color: #31d0aa;
 }
