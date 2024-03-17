@@ -45,6 +45,11 @@ ul {
   justify-content: space-between;
 }
 
+.header-container a {
+  display: block;
+  padding: 24px 0;
+}
+
 .header-navigation {
   display: flex;
   align-items: center;
@@ -79,6 +84,7 @@ ul {
 }
 
 .navigation-title {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -87,11 +93,27 @@ ul {
   font-style: normal;
   display: block;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-title:hover,
 .navigation-title:focus {
   color: #404bbf;
+}
+
+.current {
+  color: #404bbf;
+}
+
+.current::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 /* Contact */
@@ -115,6 +137,7 @@ ul {
   letter-spacing: 0.02em;
   color: #434455;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info:hover {
